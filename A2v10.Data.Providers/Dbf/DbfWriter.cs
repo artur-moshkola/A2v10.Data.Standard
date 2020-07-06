@@ -18,8 +18,10 @@ namespace A2v10.Data.Providers.Dbf
 
 		public void Write(Stream stream)
 		{
-			using var bw = new BinaryWriter(stream);
-			Write(bw);
+			using (var bw = new BinaryWriter(stream))
+			{
+				Write(bw);
+			}
 		}
 
 		public void Write(BinaryWriter wr)

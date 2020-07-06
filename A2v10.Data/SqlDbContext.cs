@@ -253,7 +253,7 @@ namespace A2v10.Data
 			source = source.Trim();
 			if (source.StartsWith("{{") && source.EndsWith("}}"))
 			{
-				String key = source[2..^2].Trim();
+				String key = source.Substring(2, source.Length - 2).Trim();
 				String def = null;
 				if (key.Contains("??"))
 				{

@@ -86,11 +86,6 @@ namespace A2v10.Data
 			return scripter.CreateScript(DataHelper, sys, meta);
 		}
 
-		public IDictionary<String, dynamic> GetDynamic()
-		{
-			return ObjectBuilder.BuildObject(Root as ExpandoObject);
-		}
-
 		IDataHelper _helper;
 
 		public IDataHelper DataHelper

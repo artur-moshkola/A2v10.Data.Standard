@@ -173,7 +173,7 @@ namespace A2v10.Data
 				Boolean isMap = false;
 				if (prop.EndsWith("*"))
 				{
-					prop = prop[0..^1];
+					prop = prop.Substring(0, prop.Length - 1);
 					isMap = true;
 				}
 				if (currentData.TryGetValue(prop, out Object propValue))

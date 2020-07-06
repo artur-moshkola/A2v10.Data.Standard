@@ -321,7 +321,7 @@ namespace A2v10.Data.DynamicExpression
 		{
 			ValidateToken(TokenId.StringLiteral);
 			Char quote = token.text[0];
-			String s = token.text[1..^1];
+			String s = token.text.Substring(1, token.text.Length - 2);
 			Int32 start = 0;
 			while (true)
 			{
@@ -644,7 +644,7 @@ namespace A2v10.Data.DynamicExpression
 					throw ParseError(textPos, Res.InvalidCharacter, ch);
 			}
 			token.id = t;
-			token.text = text[tokenPos..textPos];
+			token.text = text.Substring(tokenPos, textPos - tokenPos);
 			token.pos = tokenPos;
 		}
 

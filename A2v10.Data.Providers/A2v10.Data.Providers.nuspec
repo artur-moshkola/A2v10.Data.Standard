@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package >
 	<metadata>
-		<id>A2v10.Data.Providers</id>
-		<title>A2v10.Data.Providers</title>
-		<version>10.0.7241</version>
+		<id>A2v10.Data.Standard.Providers</id>
+		<title>A2v10.Data.Standard.Providers</title>
+		<version>10.0.7242</version>
 		<authors>AlexKukhtin</authors>
-		<owners>AlexKukhtin</owners>
-		<projectUrl>https://github.com/alex-kukhtin/A2v10.Data.Core</projectUrl>
+		<owners>ArturMoshkola</owners>
+		<projectUrl>https://github.com/artur-moshkola/A2v10.Data.Standard</projectUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>A2v10 Data Providers (.NET Core)</description>
 		<releaseNotes>Current NUGET release.</releaseNotes>
 		<copyright>Copyright © 2015-2020 Alex Kukhtin.</copyright>
 		<tags>A2v10 Platform Business WebApp</tags>
 		<dependencies>
-			<group targetFramework=".NETCoreApp3.1">
-				<dependency id="A2v10.Data.Interfaces" version="10.0.7241" />
+			<group targetFramework="netstandard2.0">
+				<dependency id="A2v10.Data.Standard.Interfaces" version="10.0.7242" />
 			</group>
 		</dependencies>
 	</metadata>

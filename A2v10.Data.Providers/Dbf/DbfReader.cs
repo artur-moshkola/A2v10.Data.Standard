@@ -88,16 +88,16 @@ namespace A2v10.Data.Providers.Dbf
 
 		private static FieldType Char2FieldType(Char ch)
 		{
-			return ch switch
-			{
-				'N' => FieldType.Numeric,
-				'D' => FieldType.Date,
-				'C' => FieldType.Char,
-				'M' => FieldType.Memo,
-				'L' => FieldType.Boolean,
-				'F' => FieldType.Float,
-				_ => throw new FormatException($"Invalid field type: '{ch}'"),
-			};
+			switch (ch)
+            {
+				case 'N': return FieldType.Numeric;
+				case 'D': return FieldType.Date;
+				case 'C': return FieldType.Char;
+				case 'M': return FieldType.Memo;
+				case 'L': return FieldType.Boolean;
+				case 'F': return FieldType.Float;
+				default: throw new FormatException($"Invalid field type: '{ch}'");
+			}
 		}
 
 		void ReadHeader(BinaryReader rdr)

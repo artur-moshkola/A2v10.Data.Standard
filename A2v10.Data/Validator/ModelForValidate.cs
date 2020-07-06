@@ -78,7 +78,7 @@ namespace A2v10.Data.Validator
 		private static void CheckSingleFieldType(String name, TypeDictionary types, TypeDictionary sharedTypes)
 		{
 			if (name.EndsWith("[]"))
-				name = name[0..^2];
+				name = name.Substring(0, name.Length - 2);
 			if (!types.ContainsKey(name) && !sharedTypes.ContainsKey(name))
 				throw new DataValidationException($"Load. Type '{name}' not found");
 		}

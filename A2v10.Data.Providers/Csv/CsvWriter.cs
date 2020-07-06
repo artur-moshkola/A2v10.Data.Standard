@@ -18,8 +18,10 @@ namespace A2v10.Data.Providers.Csv
 
 		public void Write(Stream stream)
 		{
-			using var sw = new StreamWriter(stream);
-			Write(sw);
+			using (var sw = new StreamWriter(stream))
+			{
+				Write(sw);
+			}
 		}
 
 		public void Write(StreamWriter wr)
